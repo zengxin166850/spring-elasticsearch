@@ -16,6 +16,8 @@ public class Goods implements Serializable {
         this.name = name;
         this.description = description;
     }
+    public Goods() {
+    }
 
     public Long getId() {
         return id;

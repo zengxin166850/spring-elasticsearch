@@ -3,6 +3,7 @@ package com.example.elastic.controller;
 import com.example.elastic.elastic.ElasticRepository;
 import com.example.elastic.po.Goods;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,8 @@ public class GoodsController {
     private final Integer PAGE_SIZE = 10;
     @Autowired
     ElasticRepository repository;
+    @Autowired
+    private ElasticsearchTemplate elasticsearchTemplate;
 
     @GetMapping("save")
     public String save() {
@@ -48,12 +51,15 @@ public class GoodsController {
     }
 
     @GetMapping("getList")
-    public List<Goods> getList(Integer pageNumber,String query) {
+    public List<Goods> getList(String name, String description) {
 
-        return null;
+        return repository.findByNameOrDescription(name, description);
     }
 
-    public void getSearchQuery(){
+    @GetMapping("getQuery")
+    public List<Goods> getQuery(String name, String description) {
 
+        return repository.findByNameAndDescription(name, description);
     }
+
 }
