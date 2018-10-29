@@ -23,7 +23,7 @@ repository接口中，自定义的方法名称关键字会影响查询的语句�
 }
 .............等
 
-***********也可以使用@Query的方式进行查询
+###也可以使用@Query的方式进行查询
 
 public interface GoodsRepository extends ElasticsearchRepository<Goods, String> {
     @Query("{"bool" : {"must" : {"field" : {"name" : "?0"}}}}")
