@@ -8,8 +8,8 @@ repository接口中，自定义的方法名称关键字会影响查询的语句�
     {"bool" : 
       {"must" :
          [ 
-         {"field" : {"name" : "?"}},
-         {"field" : {"price" : "?"}} 
+         {"match" : {"name" : "?"}},
+         {"match" : {"price" : "?"}} 
         ]
       }
     }
@@ -19,8 +19,8 @@ repository接口中，自定义的方法名称关键字会影响查询的语句�
     {"bool" : 
       {"should" : 
         [ 
-        {"field" : {"name" : "?"}}, 
-        {"field" : {"price" : "?"}} 
+        {"match" : {"name" : "?"}}, 
+        {"match" : {"price" : "?"}} 
         ]
       }
     }
