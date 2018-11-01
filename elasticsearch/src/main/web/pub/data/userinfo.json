@@ -1,0 +1,8 @@
+{
+	"msg": "操作成功!",
+	"status": 1,
+	"data": {
+		"id":"123456789",
+		"name":"administrator"
+	}
+}

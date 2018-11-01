@@ -1,0 +1,282 @@
+{
+    "message": "成功",
+    "status": 1,
+    "data": [
+        {
+        	"pid": "0",	
+        	"id": "001",
+        	"url": "",  			 
+        	"control": 1,
+        	"ico": "fa-shield",
+        	"name": "安全监测",
+        	"btns": [],	
+        	"children": [{
+	        	"pid": "001",	
+	        	"id": "001001",
+	        	"url": "",  			 
+	        	"control": 1,
+	        	"ico": "",
+	        	"name": "实时监测",
+	        	"btns": [],	
+	        	"children": [{
+		        	"pid": "001001",	
+		        	"id": "001001001",
+		        	"url": "#page/monitor/safety/realtime/index",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "实时数据",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "monitor",
+		        	"note": ""	
+		        },{
+		        	"pid": "001001",	
+		        	"id": "001001002",
+		        	"url": "#page/monitor/safety/realtime/abnormity",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "异常数据消警",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "monitor",
+		        	"note": ""	
+		        }],
+	        	"sys": "monitor",
+	        	"note": ""	
+	        },{
+	        	"pid": "001",	
+	        	"id": "001002",
+	        	"url": "",  			 
+	        	"control": 1,
+	        	"ico": "",
+	        	"name": "参数管理",
+	        	"children": [{
+		        	"pid": "001002",	
+		        	"id": "001002001",
+		        	"url": "#page/monitor/safety/param/station",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "测点管理",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "monitor",
+		        	"note": ""	
+		        }],
+	        	"btns": [],	
+	        	"sys": "monitor",
+	        	"note": ""	
+	        },{
+	        	"pid": "001",	
+	        	"id": "001003",
+	        	"url": "",  			 
+	        	"control": 1,
+	        	"ico": "",
+	        	"name": "历史数据",
+	        	"children": [{
+		        	"pid": "001003",	
+		        	"id": "001003001",
+		        	"url": "#page/monitor/safety/history/daily",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "监测日报",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "monitor",
+		        	"note": ""	
+		        },{
+		        	"pid": "001003",	
+		        	"id": "001003004",
+		        	"url": "#page/monitor/safety/history/alarm",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "报警历史查询",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "monitor",
+		        	"note": ""	
+		        },{
+		        	"pid": "001003",	
+		        	"id": "001003006",
+		        	"url": "#page/monitor/safety/history/curve",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "历史曲线",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "monitor",
+		        	"note": ""	
+		        }],
+	        	"btns": [],	
+	        	"sys": "monitor",
+	        	"note": ""	
+	        }],		
+        	"sys": "monitor",
+        	"note": ""	
+        },{
+        	"pid": "0",	
+        	"id": "002",
+        	"url": "",  			 
+        	"control": 1,
+        	"ico": "fa-user",
+        	"name": "人员定位",
+        	"children": [{
+        		"pid": "002",	
+	        	"id": "002001",
+	        	"url": "",  			 
+	        	"control": 1,
+	        	"ico": "",
+	        	"name": "实时监测",
+	        	"btns": [],	
+	        	"children": [{
+		        	"pid": "002001",	
+		        	"id": "002001001",
+		        	"url": "#page/monitor/people/realtime/stats",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "井下人员实时统计",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "monitor",
+		        	"note": ""	
+		        },{
+		        	"pid": "002001",	
+		        	"id": "002001002",
+		        	"url": "#page/monitor/people/realtime/monitor",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "井下人员实时监测",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "monitor",
+		        	"note": ""	
+		        },{
+		        	"pid": "002001",	
+		        	"id": "002001003",
+		        	"url": "#page/monitor/people/realtime/overtime",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "井下超时实时报警",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "monitor",
+		        	"note": ""	
+		        },{
+		        	"pid": "002001",	
+		        	"id": "002001004",
+		        	"url": "#page/monitor/people/realtime/overman",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "井下超员实时报警",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "monitor",
+		        	"note": ""	
+		        }],		
+	        	"sys": "monitor",
+	        	"note": ""
+        	},{
+        		"pid": "002",	
+	        	"id": "002002",
+	        	"url": "",  			 
+	        	"control": 1,
+	        	"ico": "",
+	        	"name": "领导带班",
+	        	"btns": [],	
+	        	"children": [{
+		        	"pid": "002002",	
+		        	"id": "002002001",
+		        	"url": "#page/monitor/people/leader/realtime",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "矿领导实时数据",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "monitor",
+		        	"note": ""	
+		        },{
+		        	"pid": "002002",	
+		        	"id": "002002002",
+		        	"url": "#page/monitor/people/leader/history",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "矿领导历史数据",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "monitor",
+		        	"note": ""	
+		        },{
+		        	"pid": "002002",	
+		        	"id": "002002003",
+		        	"url": "#page/monitor/people/leader/config",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "矿领导配置",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "monitor",
+		        	"note": ""	
+		        }],
+	        	"sys": "monitor",
+	        	"note": ""
+        	},{
+        		"pid": "002",	
+	        	"id": "002003",
+	        	"url": "",  			 
+	        	"control": 1,
+	        	"ico": "",
+	        	"name": "历史数据",
+	        	"btns": [],	
+	        	"children": [{
+		        	"pid": "002003",	
+		        	"id": "002003001",
+		        	"url": "#page/monitor/people/history/data",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "井下人员历史数据",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "monitor",
+		        	"note": ""	
+		        },{
+		        	"pid": "002003",	
+		        	"id": "002003002",
+		        	"url": "#page/monitor/people/history/overman",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "井下超员历史报警",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "monitor",
+		        	"note": ""	
+		        },{
+		        	"pid": "002003",	
+		        	"id": "002003003",
+		        	"url": "#page/monitor/people/history/overtime",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "井下超时历史报警",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "monitor",
+		        	"note": ""	
+		        },{
+		        	"pid": "002003",	
+		        	"id": "002003004",
+		        	"url": "#page/monitor/people/history/stats",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "井下人员历史统计",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "monitor",
+		        	"note": ""	
+		        }],		
+	        	"sys": "monitor",
+	        	"note": ""
+        	}],
+        	"btns": [],	
+        	"sys": "monitor",
+        	"note": ""
+        } 					       		
+    ]
+}

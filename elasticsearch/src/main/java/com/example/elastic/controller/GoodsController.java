@@ -1,7 +1,9 @@
 package com.example.elastic.controller;
 
+import com.example.elastic.consts.Qconst;
 import com.example.elastic.elastic.ElasticRepository;
 import com.example.elastic.po.Goods;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,12 +17,12 @@ import java.util.Optional;
 @RequestMapping("goods")
 public class GoodsController {
 
-
-    private final Integer PAGE_SIZE = 10;
     @Autowired
     ElasticRepository repository;
     @Autowired
     private ElasticsearchTemplate elasticsearchTemplate;
+    @Autowired
+    RabbitTemplate rabbitTemplate;
 
     @GetMapping("save")
     public String save() {
@@ -61,5 +63,12 @@ public class GoodsController {
 
         return repository.findByNameAndDescription(name, description);
     }
-
+    @GetMapping("bajie")
+    public void sendToBajie(String msg){
+        rabbitTemplate.convertAndSend(Qconst.Ex.BA_JIE,"test",msg);
+    }
+    @GetMapping("konghao")
+    public void sendToKonghao(String msg){
+        rabbitTemplate.convertAndSend(Qconst.Ex.KONG_HAO,"konghao.11",msg);
+    }
 }

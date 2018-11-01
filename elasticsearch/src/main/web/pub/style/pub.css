@@ -1,0 +1,312 @@
+/*
+ *  系统公共样式文件
+ *  author: tter
+ * 	date: 2018-08-01
+ * 
+ * */
+a:hover{
+	text-decoration: none;
+}
+*:focus{
+	outline: none;
+}
+/*////////////////////////////////////公共类////////////////////////////////////*/
+.full-w{
+	width: 100%;
+}
+.full-h{
+	height: 100%;
+}
+.float-l{
+	float: left;
+}
+.float-r{
+	float: right;
+}
+.txt-l{
+	text-align: left !important;
+}
+.txt-r{
+	text-align: right!important;
+}
+.img-responsive-h{
+	display: block;
+   	width: auto;
+    max-height: 100%;
+}
+.middle-v:before, .middle-v before{
+	content: "";
+	display: inline-block;
+	height: 100%;
+	width: 0px;
+	visibility: hidden;
+	vertical-align: middle;
+}
+.middle-v-inner{
+	display: inline-block!important;
+	vertical-align: middle;
+}
+.no-shadow{
+	box-shadow: none !important;
+}
+.space-r-10{
+	margin-right: 10px!important;
+}
+.space-r-15{
+	margin-right: 15px!important;
+}
+.space-r-20{
+	margin-right: 20px!important;
+}
+.space-r-25{
+	margin-right: 25px!important;
+}
+.space-r-30{
+	margin-right: 30px!important;
+}
+.space-r-40{
+	margin-right: 40px!important;
+}
+.space-l-10{
+	margin-left: 10px!important;
+}
+.space-l-15{
+	margin-left: 15px!important;
+}
+.space-l-20{
+	margin-left: 20px!important;
+}
+.space-l-25{
+	margin-left: 25px!important;
+}
+.space-l-30{
+	margin-left: 30px!important;
+}
+.space-l-40{
+	margin-left: 40px!important;
+}
+.btn-round-2 {
+	border-radius: 2px!important;
+}
+
+
+/*////////////////////////////////////对ace系统样式的添加////////////////////////////////////*/
+/*widget组件*/
+.widget-box .nav-search{
+	position: static;
+	float: right;
+	width: 100%;
+}
+.widget-box .nav-search .input-icon,
+.widget-box .nav-search .nav-search-input{
+	width: 100%;
+}
+.widget-toolbox .select-tree-btn{
+	border-radius: 4px!important;
+    padding: 5px 5px 4px;
+    font-size: 13px;
+    border-bottom-width: 2px;
+    line-height: 1.38;
+}
+.widget-toolbox .select2-selection{
+	border-radius: 4px!important;
+	border-bottom-width: 2px!important;
+}
+.widget-toolbox .select2 .select2-selection--single .select2-selection__rendered{
+	line-height: 1.35!important;
+	padding: 5px 20px 4px 8px;
+	color: #6688a6!important;
+}
+.widget-toolbox .select2 .select2-selection--single{
+	height: 100%!important;
+}
+.widget-toolbox .select2-container--default .select2-selection--single{
+	border-color: #8aafce!important;
+}
+.widget-box .form-control{
+	/*height: 29px;*/
+	font-size: 13px;
+}
+/*well样式添加*/
+.search-more{
+	border: none;
+	background-color: #F8F8F8;
+	border-radius: 2px;
+	box-shadow: none;
+}
+/*表单元素 圆角样式添加*/
+input.round,
+textarea.round {
+	border-radius: 2px!important;
+}
+
+.input-group.round>input{
+	border-radius: 3px 0 0 3px!important;
+}
+.input-group.round>.input-group-addon{
+	cursor: pointer;
+	border-radius: 0 3px 3px 0!important;
+}
+/*btn-group新加样式*/
+.btn-group-filter>.btn{
+	background-color: #fff!important;
+	color: #4a4a4a!important;
+	font-weight: normal;
+	text-shadow: none;
+	border: none;
+	border-bottom: 1px solid #fff;
+	padding: 10px 5px;
+}
+.btn-group-filter>.btn:focus, .btn-group-filter>.btn:active{
+	outline: none;
+	background-color: #fff!important;
+	border-color: #fff;
+}
+.btn-group-filter>.btn.active, .btn-group-filter>.btn.active:hover{
+	background-color: #fff!important;
+	color: #d15b47!important;
+	font-weight: bold;
+	border-color: #fff;
+	border-bottom-color: #d15b47;
+	outline: none;
+}
+.btn-group-filter.btn-group+.btn.active:after, .btn-group-filter.btn-group>.btn.active:after{
+	left: 0px;
+    right: 0px;
+    bottom: -2px;
+    border-bottom-width: 2px;
+    border-bottom: 1px solid #d15b47;
+}
+/*ace-switch mini样式*/
+input[type=checkbox].ace.ace-switch.ace-switch-mini+.lbl{
+	min-height: 21px;
+}
+input[type=checkbox].ace.ace-switch.ace-switch-mini+.lbl::after{
+	width: 25px;
+	height: 15px;
+	line-height: 15px;
+	font-size: 12px;
+	left: 26px;
+	font-weight: normal;
+}
+input[type=checkbox].ace.ace-switch.ace-switch-mini+.lbl::before{
+	width: 55px;
+    height: 21px;
+    line-height: 17px;
+    font-size: 12px;
+}
+input[type=checkbox].ace.ace-switch.ace-switch-mini.ace-switch-7:checked+.lbl::before{
+	text-indent: 5px;
+}
+
+/*datatable 使用bootstrap风格后自定义工具位置*/
+.dataTable .dataTables_empty{
+	text-align: center;
+	padding: 15px;
+}
+.datatable-bootstrap-bottom{
+	position: relative;
+	border-bottom: 1px solid #e0e0e0;
+	padding: 8px 0 10px!important;
+    background-color: #EFF3F8;
+}
+.datatable-bootstrap-bottom label{
+	margin-bottom: 0;
+}
+.widget-main .datatable-bootstrap-bottom{
+	border-bottom: none;
+}
+.datatable-bootstrap-bottom .dataTables_length{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 30px;
+    line-height: 32px;
+}
+.datatable-bootstrap-bottom .dataTables_length select{
+	vertical-align: baseline;
+}
+div.dataTables_wrapper .datatable-bootstrap-bottom div.dataTables_info{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 30px;
+    line-height: 32px;
+    padding-top: 0;
+}
+.datatable-bootstrap-bottom .dataTables_paginate{
+	display: inline-block;
+	vertical-align: middle;
+	position: absolute;
+    right: 15px;
+}
+
+.table>thead.plain-tablehead>tr,
+.dataTable>thead.plain-tablehead>tr>th.sorting_asc{
+	background: none;
+	background-image: none;
+}
+.table>thead.plain-tablehead>tr>th{
+	border-bottom: 1px solid #ddd;
+	padding: 11px 8px;
+}
+.dataTable>thead.plain-tablehead>tr>th[class*=sorting_]{
+	color: #707070;
+}
+.DTFC_LeftWrapper .DTFC_LeftHeadWrapper .dataTable th{
+	border-bottom-width: 0;
+}
+/*////////////////////////////////////ace现有样式调整优化////////////////////////////////////*/
+.label{
+    line-height: 20px;
+    padding: 0 0.7em;
+}
+.label-lg{
+	line-height: 24px;
+}
+.btn-white.btn-default.multiselect,
+.btn-white.btn-default.multiselect:hover{
+	color: #333!important;
+}
+.btn-group>.btn.multiselect>.caret{
+	display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border: none;
+    width: 14px;
+    height: 14px;
+    font-size: 16px;
+    margin: -5px 0 0 2px;
+}
+.btn-group>.btn.multiselect>.caret:before{
+	content: "\f107";
+}
+.btn.btn-white.multiselect.active, .btn.btn-white.multiselect:focus{
+	box-shadow: none !important;
+}
+.multiselect-item.multiselect-filter .input-group-addon{
+	display: none;
+}
+.multiselect-item.multiselect-filter .btn.multiselect-clear-filter{
+	padding: 3px;
+    border-width: 4px;
+}
+
+/*隐藏头部和菜单*/
+/*
+#navbar{
+    display:none;
+}
+.navbar-fixed-top+.main-container{
+    padding-top:0;
+}
+#sidebar{
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+}
+.sidebar+.main-content{
+    margin-left:0;
+}
+*/

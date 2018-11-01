@@ -1,0 +1,25 @@
+
+类型：json 树结构
+
+外壳： 
+	{
+		"message": "操作成功!",
+		"status": 1,  // 1成功
+		"data": [] 
+	}
+
+属性说明：
+
+"id": "101517302206000001", 	 // ID 必须且唯一
+"pid": "0",  					 // 上级ID 必须
+"ico": "fa-television",	         // 默认值 fa-tv （子系统和左侧第一级菜单显示）
+
+
+"url": "#home",
+"control": 1,  //1，传统div 2 a
+
+"children": [],
+"btns": [],
+"name": "home页",
+"sys": "assets",
+"note": "",

@@ -1,0 +1,42 @@
+.select-tree-container{
+	position: relative;
+}
+.select-tree-container>i.fa{
+	position: absolute;
+    right: 2px;
+    padding: 3px;
+    top: 50%;
+    margin-top: -10px;
+    font-size: 110%;
+    cursor: pointer;
+    z-index: 50;
+}
+.select-tree-container input[readonly]{
+	background-color: #ffffff!important;
+}
+.select-tree-container .select-tree-txt{
+	padding-right: 18px;
+	width: 100%;
+}
+.select-tree-container .select-tree-txt[readonly]{
+	cursor: pointer;
+}
+.select-tree-dropdown{
+	min-width: 100%;
+    position: absolute;
+    z-index: 10;
+    background-color: #fff;
+    border: 1px solid #4492c9;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+    border-top-color: #d5d5d5;
+}
+.select-tree-container .select-tree-dropdown{
+	max-height: 320px;
+	overflow: auto;
+}
+.select-tree-dropdown.left{
+	left: 0;
+}
+.select-tree-dropdown.right{
+	right: 0;
+}

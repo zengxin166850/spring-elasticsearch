@@ -1,0 +1,116 @@
+{
+    "message": "成功",
+    "status": 1,
+    "data": [
+        {
+        	"pid": "0",	
+        	"id": "001",
+        	"url": "",  			 
+        	"control": 1,
+        	"ico": "fa-tachometer",
+        	"name": "安全监测",
+        	"btns": [],	
+        	"children": [
+        		{
+		        	"pid": "001",	
+		        	"id": "001001",
+		        	"url": "#page/jclw/aqjc/ssjc",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "实时监测",
+		        	"btns": [],	
+		        	"children": [
+		        		{
+				        	"pid": "001001",	
+				        	"id": "001001001",
+				        	"url": "#page/jclw/aqjc/ssjc/sssj",  			 
+				        	"control": 1,
+				        	"ico": "fa-caret-right",
+				        	"name": "实时数据",
+				        	"btns": [],	
+				        	"children": [],		
+				        	"sys": "jclw",
+				        	"note": ""	
+				        },
+				        {
+				        	"pid": "001001",	
+				        	"id": "001001002",
+				        	"url": "#page/jclw/aqjc/ssjc/ssqx",  			 
+				        	"control": 1,
+				        	"ico": "fa-caret-right",
+				        	"name": "实时曲线",
+				        	"btns": [],	
+				        	"children": [],		
+				        	"sys": "jclw",
+				        	"note": ""	
+				        },
+				        {
+				        	"pid": "001001",	
+				        	"id": "001001003",
+				        	"url": "#page/jclw/aqjc/ssjc/ycsj",  			 
+				        	"control": 1,
+				        	"ico": "fa-caret-right",
+				        	"name": "异常数据",
+				        	"btns": [],	
+				        	"children": [],		
+				        	"sys": "jclw",
+				        	"note": ""	
+				        },
+				        {
+				        	"pid": "001001",	
+				        	"id": "001001004",
+				        	"url": "#page/jclw/aqjc/ssjc/sscszt",  			 
+				        	"control": 1,
+				        	"ico": "fa-caret-right",
+				        	"name": "实时传输状态",
+				        	"btns": [],	
+				        	"children": [],		
+				        	"sys": "jclw",
+				        	"note": ""	
+				        },
+				        {
+				        	"pid": "001001",	
+				        	"id": "001001005",
+				        	"url": "#page/jclw/aqjc/ssjc/lwtj",  			 
+				        	"control": 1,
+				        	"ico": "fa-caret-right",
+				        	"name": "联网统计",
+				        	"btns": [],	
+				        	"children": [],		
+				        	"sys": "jclw",
+				        	"note": ""	
+				        },
+				        {
+				        	"pid": "001001",	
+				        	"id": "001001006",
+				        	"url": "#page/jclw/aqjc/ssjc/",  			 
+				        	"control": 1,
+				        	"ico": "fa-caret-right",
+				        	"name": "联网统计",
+				        	"btns": [],	
+				        	"children": [],		
+				        	"sys": "jclw",
+				        	"note": ""	
+				        }
+		        	],		
+		        	"sys": "jclw",
+		        	"note": ""	
+		        },
+		        {
+		        	"pid": "001",	
+		        	"id": "001002",
+		        	"url": "#",  			 
+		        	"control": 1,
+		        	"ico": "",
+		        	"name": "历史数据",
+		        	"btns": [],	
+		        	"children": [],		
+		        	"sys": "jclw",
+		        	"note": ""	
+		        }
+        	],		
+        	"sys": "jclw",
+        	"note": ""	
+        }   					       		
+    ]
+}
