@@ -12,6 +12,6 @@ client.connect("admins","admins",function() {
     client.subscribe("/exchange/WEB_BAJIE/"+"test", function(data) {
         var msg = data.body;
         alert("收到数据：" + msg);
-    })},
-    function() {console.log('error');},
-    "/");
+    })},function() {
+    console.log('error');
+},"/");

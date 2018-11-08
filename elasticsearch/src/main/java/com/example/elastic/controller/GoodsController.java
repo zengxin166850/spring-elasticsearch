@@ -2,6 +2,7 @@ package com.example.elastic.controller;
 
 import com.example.elastic.consts.Qconst;
 import com.example.elastic.elastic.ElasticRepository;
+import com.example.elastic.mq.kafka.KafkaProducer;
 import com.example.elastic.po.Goods;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,8 @@ public class GoodsController {
     ElasticRepository repository;
     @Autowired
     private ElasticsearchTemplate elasticsearchTemplate;
+    @Autowired
+    private KafkaProducer producer;
     @Autowired
     RabbitTemplate rabbitTemplate;
 
@@ -70,5 +73,10 @@ public class GoodsController {
     @GetMapping("konghao")
     public void sendToKonghao(String msg){
         rabbitTemplate.convertAndSend(Qconst.Ex.KONG_HAO,"konghao.11",msg);
+    }
+
+    @GetMapping("test001")
+    public void sendToKafka(){
+        producer.send();
     }
 }
