@@ -1,38 +1,404 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>首页</title>
 
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-    <title>title</title>
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
 
-    <link rel="stylesheet" href="/pub/script/dep/bootstrap-3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/pub/style/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<!-- page specific plugin styles -->
 
-    <link rel="stylesheet" href="/pub/style/ace/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
-    <link rel="stylesheet" href="/pub/style/ace/ace-part2.min.css" class="ace-main-stylesheet" />
-    <link rel="stylesheet" href="/pub/style/ace/ace-skins.min.css" />
-    <link rel="stylesheet" href="/pub/style/ace/ace-ie.min.css" />
-    <script src="/pub/script/ace/ace-extra.min.js"></script>
-</head>
+		<!-- text fonts -->
+		<link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
 
-<body>
-<div class="col-lg-3 col-md-4 col-sm-6">
-    <div class="input-group round">
-        <input class="form-control" id="search" placeholder="传感器编号" type="text">
-        <span class="input-group-addon" id="search-btn">
-            <i class="fa fa-search bigger-110"></i>
-        </span>
-    </div>
-</div>
+		<!-- ace styles -->
+		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
 
-<script src="/pub/script/dep/jquery-v2.1.4.min.js"></script>
-<script src="/pub/script/dep/jquery-v1.12.4.min.js"></script>
-<script src="/pub/script/dep/jquery-ui-1.12.1/jquery-ui.min.js"></script>
-<script src="/pub/script/frame/sockjs-client-v1.1.5/sockjs.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/pub/script/frame/stomp-client-1.7.1/stomp.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/pub/index.js" type="text/javascript" charset="utf-8"></script>
-</body>
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+		<![endif]-->
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+		<!--[if lte IE 8]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body class="no-skin">
+		<!--1 顶部导航栏-->
+		<div id="navbar" class="navbar navbar-default ace-save-state">
+			<div class="navbar-container ace-save-state" id="navbar-container">
+				<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+					<span class="sr-only">侧边栏按钮</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="navbar-header pull-left">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							<i class="fa fa-leaf"></i>
+							管理界面
+						</small>
+					</a>
+				</div>
+
+				<div class="navbar-buttons navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li>
+							<select id="skin-colorpicker" class="hide">
+								<option data-skin="no-skin" value="#438EB9">#438EB9</option>
+								<option data-skin="skin-1" value="#222A2D">#222A2D</option>
+								<option data-skin="skin-2" value="#C6487E">#C6487E</option>
+								<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+							</select>
+						</li>
+						<li class="grey dropdown-modal">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="ace-icon fa fa-tasks"></i>
+								<span class="badge badge-grey">4</span>
+							</a>
+
+							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="ace-icon fa fa-check"></i>
+									4项代办任务
+								</li>
+
+								<li class="dropdown-content">
+									<ul class="dropdown-menu dropdown-navbar">
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">软件更新</span>
+													<span class="pull-right">65%</span>
+												</div>
+
+												<div class="progress progress-mini">
+													<div style="width:65%" class="progress-bar"></div>
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">硬件提升</span>
+													<span class="pull-right">35%</span>
+												</div>
+
+												<div class="progress progress-mini">
+													<div style="width:35%" class="progress-bar progress-bar-danger"></div>
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">单元测试</span>
+													<span class="pull-right">15%</span>
+												</div>
+
+												<div class="progress progress-mini">
+													<div style="width:15%" class="progress-bar progress-bar-warning"></div>
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">Bug 修复</span>
+													<span class="pull-right">90%</span>
+												</div>
+
+												<div class="progress progress-mini progress-striped active">
+													<div style="width:90%" class="progress-bar progress-bar-success"></div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="dropdown-footer">
+									<a href="#">
+										详情查看
+										<i class="ace-icon fa fa-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="purple dropdown-modal">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="ace-icon fa fa-bell icon-animated-bell"></i>
+								<span class="badge badge-important">1</span>
+							</a>
+
+							<ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="ace-icon fa fa-exclamation-triangle"></i>
+									0
+								</li>
+
+								<li class="dropdown-content">
+									<ul class="dropdown-menu dropdown-navbar navbar-pink">
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
+														最新评论
+													</span>
+													<span class="pull-right badge badge-info">+12</span>
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<i class="btn btn-xs btn-primary fa fa-user"></i>
+												我觉得不行 ...
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="dropdown-footer">
+									<a href="#">
+										查看所有通知
+										<i class="ace-icon fa fa-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="green dropdown-modal">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
+								<span class="badge badge-success">1</span>
+							</a>
+
+							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="ace-icon fa fa-envelope-o"></i>
+									1条消息
+								</li>
+
+								<li class="dropdown-content">
+									<ul class="dropdown-menu dropdown-navbar">
+										<li>
+											<a href="#" class="clearfix">
+												<img src="assets/images/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+												<span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">小北方:</span>
+														topic001发来消息 ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>1分钟前</span>
+													</span>
+												</span>
+											</a>
+										</li>
+
+									</ul>
+								</li>
+
+								<li class="dropdown-footer">
+									<a href="inbox.html">
+										查看所有信息
+										<i class="ace-icon fa fa-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue dropdown-modal">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>欢迎您,</small>
+									Tomas Yuan
+								</span>
+
+								<i class="ace-icon fa fa-caret-down"></i>
+							</a>
+
+							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="#">
+										<i class="ace-icon fa fa-cog"></i>
+										设置
+									</a>
+								</li>
+
+								<li>
+									<a href="profile.html">
+										<i class="ace-icon fa fa-user"></i>
+										个人信息
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="#">
+										<i class="ace-icon fa fa-power-off"></i>
+										退出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div><!-- /.navbar-container -->
+		</div>
+
+		<div class="main-container ace-save-state" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.loadState('main-container')}catch(e){}
+			</script>
+			<!--2 侧边栏-->
+			<div id="sidebar" class="sidebar responsive ace-save-state">
+				<script type="text/javascript">
+					try{ace.settings.loadState('sidebar')}catch(e){}
+				</script>
+				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+					<i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+				</div>
+				<ul class="nav nav-list">
+
+					<li class="active open">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-file-o"></i>
+							<span class="menu-text">
+								侧边栏菜单
+								<span class="badge badge-primary">5</span>
+							</span>
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="#">
+									<i class="menu-icon fa fa-caret-right"></i>
+									菜单管理
+								</a>
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="#">
+									<i class="menu-icon fa fa-caret-right"></i>
+									角色管理
+								</a>
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="#">
+									<i class="menu-icon fa fa-caret-right"></i>
+									功能管理
+								</a>
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="#">
+									<i class="menu-icon fa fa-caret-right"></i>
+									ELK搜索测试
+								</a>
+								<b class="arrow"></b>
+							</li>
+
+							<li class="active">
+								<a href="#">
+									<i class="menu-icon fa fa-caret-right"></i>
+									文档查询
+								</a>
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>
+				</ul><!-- /.nav-list -->
+
+			</div>
+
+			<div class="main-content">
+				<div class="main-content-inner">
+					<!--3 面包屑-->
+					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+						<ul class="breadcrumb">
+							<li>
+								<i class="ace-icon fa fa-home home-icon"></i>
+								<a href="#">首页</a>
+							</li>
+						</ul>
+					</div>
+					<!--4 页面内容-->
+					<div class="page-content">
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+			<!--回到顶部-->
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="assets/js/jquery-2.1.4.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!-- ace scripts -->
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+	</body>
 </html>
