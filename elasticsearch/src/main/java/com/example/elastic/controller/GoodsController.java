@@ -6,7 +6,6 @@ import com.example.elastic.mq.kafka.KafkaProducer;
 import com.example.elastic.po.Goods;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,8 +19,8 @@ public class GoodsController {
 
     @Autowired
     ElasticRepository repository;
-    @Autowired
-    private ElasticsearchTemplate elasticsearchTemplate;
+//    @Autowired
+//    private ElasticsearchTemplate elasticsearchTemplate;
     @Autowired
     private KafkaProducer producer;
     @Autowired
@@ -30,7 +29,7 @@ public class GoodsController {
     @GetMapping("save")
     public String save() {
         long timeMillis = System.currentTimeMillis();
-        Goods goods = new Goods(timeMillis, "商品" + timeMillis, "测试商品");
+        Goods goods = new Goods(timeMillis, "商品" + timeMillis, "测试商品",20);
         repository.save(goods);
         return "success";
     }
@@ -42,8 +41,8 @@ public class GoodsController {
     }
 
     @GetMapping("update")
-    public String update(Long id, String name, String description) {
-        Goods goods = new Goods(id, name, description);
+    public String update(Long id, String name, String description,int num) {
+        Goods goods = new Goods(id, name, description,num);
         repository.save(goods);
         return "success";
     }

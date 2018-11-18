@@ -10,11 +10,13 @@ public class Goods implements Serializable {
     private Long id;
     private String name;
     private String description;
+    private int num;
 
-    public Goods(Long id, String name, String description) {
+    public Goods(Long id, String name, String description,int num) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.num = num;
     }
     public Goods() {
     }
@@ -37,6 +39,14 @@ public class Goods implements Serializable {
 
     public String getDescription() {
         return description;
+    }
+
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
     }
 
     public void setDescription(String description) {
