@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication
 @EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class})
+//@EnableElasticsearchRepositories(basePackages = {})
 public class ElasticApplication {
 
     public static void main(String[] args) {
