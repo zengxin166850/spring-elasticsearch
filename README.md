@@ -1,5 +1,5 @@
 # spring-elasticsearch
-**使用spring-boot-starter-data-elasticsearch集成ES：**
+**使用spring-boot-starter-data-elasticsearch集成ES：**  
 1.修改pom文件
 
     <dependency>  
