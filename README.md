@@ -1,29 +1,47 @@
 # spring-elasticsearch
-测试elasticsearch在spring中的api
+**使用spring-boot-starter-data-elasticsearch集成ES：**
+1.修改pom文件
 
-repository接口中，自定义的方法名称关键字会影响查询的语句：
-  
-例如：  And出现时 -->  findByNameAndPrice   代表需要满足field为name和price的两个条件，解释之后的DSL语句为：
+    <dependency>  
+	    <groupId>org.springframework.boot</groupId>  
+	    <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+    </dependency>
 
-    {"bool" : 
-      {"must" :
-         [ 
-         {"match" : {"name" : "?"}},
-         {"match" : {"price" : "?"}} 
-        ]
-      }
+   2.配置application.properties文件
+   
+
+    #elasticsearch 
+     spring.data.elasticsearch.cluster-name=elasticsearch  
+     spring.data.elasticsearch.repositories.enabled=true  
+     spring.data.elasticsearch.cluster-nodes=localhost:9300
+
+3.新建一个接口继承ElasticsearchRepository，此时默认的增删改查就已经存在了
+
+    @Component  //让spring管理
+    public interface ElasticRepository extends
+    ElasticsearchRepository<T, Long> {
     }
+4.根据jpa的命名方式，在接口中新建方法(不需要实现)
 
-同理，使用OR则代表，两者满足其一就行。 findByNameOrPrice代表
+| 关键字| 方法命名示例|
+|--|--|
+|  And  | findByNameAndNum |
+|  Or   | indByNameOrDiscription |
+|  Between| findByNumBetween|
+|  Like  | findByNameLike|
+|  NotLike| findByNameNotLike|
+|  OrderBy| findByIdOrderByXDesc|
+|  Not | findByNameNot|
+5.注入到Controller中，调用方法时给上对应的参数即可。
+6.复杂查询使用[ElasticsearchTemplate](https://docs.spring.io/spring-data/elasticsearch/docs/current/reference/html/)或[TransportClient](https://www.elastic.co/guide/en/elasticsearch/client/java-api/current/index.html)
 
-    {"bool" : 
-      {"should" : 
-        [ 
-        {"match" : {"name" : "?"}}, 
-        {"match" : {"price" : "?"}} 
-        ]
-      }
-    }
+
+          
+   
+
+
+    
+          
 
 
 
