@@ -18,8 +18,7 @@
 3.新建一个接口继承ElasticsearchRepository，此时默认的增删改查就已经存在了
 
     @Component  //让spring管理
-    public interface ElasticRepository extends
-    ElasticsearchRepository<T, Long> {
+    public interface ElasticRepository extends ElasticsearchRepository<T, Long> {
     }
 4.根据jpa的命名方式，在接口中新建方法(不需要实现)
 
