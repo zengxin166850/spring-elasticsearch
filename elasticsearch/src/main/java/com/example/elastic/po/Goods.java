@@ -10,9 +10,9 @@ public class Goods implements Serializable {
     private Long id;
     private String name;
     private String description;
-    private int num;
+    private Integer num;
 
-    public Goods(Long id, String name, String description,int num) {
+    public Goods(Long id, String name, String description,Integer num) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -41,15 +41,26 @@ public class Goods implements Serializable {
         return description;
     }
 
-    public int getNum() {
+    public Integer getNum() {
         return num;
     }
 
-    public void setNum(int num) {
+    public void setNum(Integer num) {
         this.num = num;
+    }
+
+    @Override
+    public String toString() {
+        return "Goods{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", num=" + num +
+                '}';
     }
 
     public void setDescription(String description) {
         this.description = description;
     }
+
 }
