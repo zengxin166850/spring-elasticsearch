@@ -34,7 +34,8 @@
 |  Not | findByNameNot|  
 
 
-5.注入到Controller中，调用方法时给上对应的参数即可。
+5.注入到Controller中，调用方法时给上对应的参数即可。  
+
 6.复杂查询使用[ElasticsearchTemplate](https://docs.spring.io/spring-data/elasticsearch/docs/current/reference/html/)或[TransportClient](https://www.elastic.co/guide/en/elasticsearch/client/java-api/current/index.html)
 
 
