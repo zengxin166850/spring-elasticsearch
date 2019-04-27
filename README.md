@@ -25,7 +25,7 @@
 | 关键字| 方法命名示例|
 |--|--|
 |  And  | findByNameAndNum |
-|  Or   | indByNameOrDiscription |
+|  Or   | findByNameOrDiscription |
 |  Between| findByNumBetween|
 |  Like  | findByNameLike|
 |  NotLike| findByNameNotLike|
